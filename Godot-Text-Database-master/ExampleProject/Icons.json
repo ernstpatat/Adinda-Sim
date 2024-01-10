@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Icon4",
+        "color": "ffff00"
+    },
+
+    {
+        "name": "Icon5",
+        "color": "00ffff",
+        "scalef": 1.2
+    },
+
+    {
+        "name": "Icon6",
+        "color": "ff00ff"
+    }
+]

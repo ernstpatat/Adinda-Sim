@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://u5bmmtnm5jkv"]
 
 [ext_resource type="Script" path="res://RaamScene.gd" id="1_tnjvh"]
-[ext_resource type="Texture2D" uid="uid://cct715ddmq5rt" path="res://Raam.png" id="1_vpga3"]
+[ext_resource type="Texture2D" uid="uid://cct715ddmq5rt" path="res://Assets/Raam.png" id="1_vpga3"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_tnjvh")

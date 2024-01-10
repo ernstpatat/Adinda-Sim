@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://610xf62h6nec"]
 
 [ext_resource type="Script" path="res://DeskScene.gd" id="1_vfxpu"]
-[ext_resource type="Texture2D" uid="uid://dnyvkx8b2r3mi" path="res://desk.png" id="2_mqbn3"]
-[ext_resource type="Texture2D" uid="uid://d2p6rnxsejcom" path="res://Monitor.png" id="2_pxyyx"]
-[ext_resource type="Texture2D" uid="uid://dipj51lur5b27" path="res://Deur.png" id="4_nboqi"]
+[ext_resource type="Texture2D" uid="uid://dnyvkx8b2r3mi" path="res://Assets/desk.png" id="2_mqbn3"]
+[ext_resource type="Texture2D" uid="uid://d2p6rnxsejcom" path="res://Assets/Monitor.png" id="2_pxyyx"]
+[ext_resource type="Texture2D" uid="uid://dipj51lur5b27" path="res://Assets/Deur.png" id="4_nboqi"]
 [ext_resource type="Script" path="res://DeskMonitor.gd" id="4_s6wb3"]
 [ext_resource type="Script" path="res://Deur.gd" id="5_4d0g1"]
 
@@ -42,7 +42,6 @@ texture = ExtResource("2_pxyyx")
 script = ExtResource("4_s6wb3")
 
 [node name="Deur" type="Sprite2D" parent="Monitor"]
-visible = false
 position = Vector2(1329.33, -58.5389)
 scale = Vector2(0.90562, 0.911772)
 texture = ExtResource("4_nboqi")
@@ -52,7 +51,7 @@ script = ExtResource("5_4d0g1")
 [connection signal="pressed" from="DeurButton" to="Monitor/Deur" method="_on_deur_button_pressed"]
 [connection signal="pressed" from="RaamButton" to="." method="_on_raam_button_pressed"]
 [connection signal="pressed" from="RaamButton" to="Monitor" method="_on_raam_button_pressed"]
-[connection signal="pressed" from="MonitorButton" to="Monitor" method="_on_button_pressed"]
 [connection signal="pressed" from="MonitorButton" to="Monitor" method="_on_monitor_button_pressed"]
+[connection signal="pressed" from="MonitorButton" to="Monitor" method="_on_button_pressed"]
 [connection signal="pressed" from="MonitorButton" to="Monitor/Deur" method="_on_monitor_button_pressed"]
 [connection signal="pressed" from="ReceptieButton" to="." method="_on_receptie_button_pressed"]

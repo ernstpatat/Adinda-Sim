@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfuglhs2rtfu4"
-path="res://.godot/imported/MonitorOn.png-9ac3d5e5c0ceabe1d649638355cd496c.ctex"
+uid="uid://bvds0rg3rc85b"
+path="res://.godot/imported/UniformBotje.png-f4043cc75792a6f4f74716b1191e937f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://MonitorOn.png"
-dest_files=["res://.godot/imported/MonitorOn.png-9ac3d5e5c0ceabe1d649638355cd496c.ctex"]
+source_file="res://Assets/UniformBotje.png"
+dest_files=["res://.godot/imported/UniformBotje.png-f4043cc75792a6f4f74716b1191e937f.ctex"]
 
 [params]
 

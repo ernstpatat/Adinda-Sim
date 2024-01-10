@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://cidbyo1vhwbps"]
 
 [ext_resource type="Script" path="res://ReceptieScene.gd" id="1_jbrul"]
-[ext_resource type="Texture2D" uid="uid://jjo1ddu7nmmj" path="res://Receptie.png" id="2_g0mmk"]
-[ext_resource type="Texture2D" uid="uid://btjxq8j880vmr" path="res://ReceptieRaam.png" id="3_wrmcb"]
+[ext_resource type="Texture2D" uid="uid://jjo1ddu7nmmj" path="res://Assets/Receptie.png" id="2_g0mmk"]
+[ext_resource type="Texture2D" uid="uid://btjxq8j880vmr" path="res://Assets/ReceptieRaam.png" id="3_wrmcb"]
 [ext_resource type="Script" path="res://ReceptieRaam.gd" id="4_5tyc1"]
 
 [node name="Node2D" type="Node2D"]

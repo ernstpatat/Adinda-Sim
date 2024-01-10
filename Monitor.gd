@@ -25,3 +25,7 @@ func ChangeVar(vars, BigNr, SmallNr):
 	elif FuncNr <= BigNr:
 		InMonitor = false
 	return FuncNr
+
+
+func _on_meldingsfiche_button_pressed():
+	get_tree().change_scene_to_file("res://MeldingsFicheScene.tscn")

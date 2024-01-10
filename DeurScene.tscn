@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://cry5omxh6kf0j"]
 
-[ext_resource type="Texture2D" uid="uid://da63odjrbksaa" path="res://Main.png" id="1_140eq"]
-[ext_resource type="Texture2D" uid="uid://dipj51lur5b27" path="res://Deur.png" id="2_846f8"]
+[ext_resource type="Texture2D" uid="uid://da63odjrbksaa" path="res://Assets/Main.png" id="1_140eq"]
+[ext_resource type="Texture2D" uid="uid://dipj51lur5b27" path="res://Assets/Deur.png" id="2_846f8"]
 [ext_resource type="Script" path="res://DeurBack.gd" id="3_rqh6t"]
-[ext_resource type="Texture2D" uid="uid://dpo43bmoryopr" path="res://GoBack2.png" id="4_johcp"]
+[ext_resource type="Texture2D" uid="uid://dpo43bmoryopr" path="res://Assets/GoBack2.png" id="4_johcp"]
 
 [node name="Node2D" type="Node2D"]
 

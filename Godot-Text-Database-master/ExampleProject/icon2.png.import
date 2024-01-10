@@ -2,23 +2,23 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2p6rnxsejcom"
-path="res://.godot/imported/Monitor.png-a876c21ff1a3c1ee634116d6ffa9b823.ctex"
+uid="uid://ch81y0acv6nr5"
+path="res://.godot/imported/icon2.png-2294dfe885793d4711fc20bee13a3760.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Monitor.png"
-dest_files=["res://.godot/imported/Monitor.png-a876c21ff1a3c1ee634116d6ffa9b823.ctex"]
+source_file="res://icon2.png"
+dest_files=["res://.godot/imported/icon2.png-2294dfe885793d4711fc20bee13a3760.ctex"]
 
 [params]
 
 compress/mode=0
-compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
+compress/bptc_ldr=0
 compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=false
