@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btjxq8j880vmr"
-path="res://.godot/imported/ReceptieRaam.png-02bb5381bf5d575d8b687a4888114575.ctex"
+uid="uid://dpo43bmoryopr"
+path="res://.godot/imported/GoBack2.png-4e4ce4e5024b41d458329edefbf6b07d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ReceptieRaam.png"
-dest_files=["res://.godot/imported/ReceptieRaam.png-02bb5381bf5d575d8b687a4888114575.ctex"]
+source_file="res://Assets/GoBack2.png"
+dest_files=["res://.godot/imported/GoBack2.png-4e4ce4e5024b41d458329edefbf6b07d.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jjo1ddu7nmmj"
-path="res://.godot/imported/Receptie.png-ca1edca9b968fe6fe419a9a9ce6d1a42.ctex"
+uid="uid://bfuglhs2rtfu4"
+path="res://.godot/imported/MonitorOn.png-9296f9b79b347e24d54085588de7a6a3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Receptie.png"
-dest_files=["res://.godot/imported/Receptie.png-ca1edca9b968fe6fe419a9a9ce6d1a42.ctex"]
+source_file="res://Assets/MonitorOn.png"
+dest_files=["res://.godot/imported/MonitorOn.png-9296f9b79b347e24d54085588de7a6a3.ctex"]
 
 [params]
 

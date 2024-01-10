@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://brabjv4bkq764"
-path="res://.godot/imported/ReceptieDeur.png-53dae3e85e7637988674d43de1f27b6f.ctex"
+path="res://.godot/imported/ReceptieDeur.png-b749e704b7c6ba09a2a6f39b1595cfdd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ReceptieDeur.png"
-dest_files=["res://.godot/imported/ReceptieDeur.png-53dae3e85e7637988674d43de1f27b6f.ctex"]
+source_file="res://Assets/ReceptieDeur.png"
+dest_files=["res://.godot/imported/ReceptieDeur.png-b749e704b7c6ba09a2a6f39b1595cfdd.ctex"]
 
 [params]
 

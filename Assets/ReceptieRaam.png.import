@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dipj51lur5b27"
-path="res://.godot/imported/Deur.png-593377cbd3b61527feab3d696e8e656c.ctex"
+uid="uid://btjxq8j880vmr"
+path="res://.godot/imported/ReceptieRaam.png-5448fb3b46a304d9817e4dcf49468a3b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Deur.png"
-dest_files=["res://.godot/imported/Deur.png-593377cbd3b61527feab3d696e8e656c.ctex"]
+source_file="res://Assets/ReceptieRaam.png"
+dest_files=["res://.godot/imported/ReceptieRaam.png-5448fb3b46a304d9817e4dcf49468a3b.ctex"]
 
 [params]
 
