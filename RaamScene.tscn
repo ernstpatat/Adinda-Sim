@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://u5bmmtnm5jkv"]
+
+[ext_resource type="Script" path="res://RaamScene.gd" id="1_tnjvh"]
+[ext_resource type="Texture2D" uid="uid://cct715ddmq5rt" path="res://Raam.png" id="1_vpga3"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_tnjvh")
+
+[node name="DeskButton" type="Button" parent="."]
+offset_left = 1052.0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(0.601253, 0.75)
+texture = ExtResource("1_vpga3")
+
+[connection signal="pressed" from="DeskButton" to="." method="_on_desk_button_pressed"]

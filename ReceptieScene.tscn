@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://cidbyo1vhwbps"]
+
+[ext_resource type="Script" path="res://ReceptieScene.gd" id="1_jbrul"]
+[ext_resource type="Texture2D" uid="uid://jjo1ddu7nmmj" path="res://Receptie.png" id="2_g0mmk"]
+[ext_resource type="Texture2D" uid="uid://btjxq8j880vmr" path="res://ReceptieRaam.png" id="3_wrmcb"]
+[ext_resource type="Script" path="res://ReceptieRaam.gd" id="4_5tyc1"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_jbrul")
+
+[node name="DeskButton" type="Button" parent="."]
+offset_right = 75.0
+offset_bottom = 648.0
+
+[node name="RaamButton" type="Button" parent="."]
+offset_left = 193.0
+offset_top = 154.0
+offset_right = 756.0
+offset_bottom = 598.0
+
+[node name="Receptie" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(0.605042, 0.75)
+texture = ExtResource("2_g0mmk")
+
+[node name="ReceptieRaam" type="Sprite2D" parent="."]
+position = Vector2(477.25, 380)
+scale = Vector2(0.604906, 0.75)
+texture = ExtResource("3_wrmcb")
+script = ExtResource("4_5tyc1")
+
+[connection signal="pressed" from="DeskButton" to="." method="_on_desk_button_pressed"]
+[connection signal="pressed" from="RaamButton" to="ReceptieRaam" method="_on_raam_button_pressed"]

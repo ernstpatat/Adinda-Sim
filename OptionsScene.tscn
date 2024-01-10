@@ -1,0 +1,66 @@
+[gd_scene load_steps=2 format=3 uid="uid://bq1mebtrw47st"]
+
+[ext_resource type="Script" path="res://OptionsScene.gd" id="1_e3q1s"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_e3q1s")
+
+[node name="CheckButton" type="CheckButton" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -116.5
+offset_right = 116.5
+offset_bottom = 74.0
+grow_horizontal = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 60
+button_pressed = true
+text = "Audio"
+
+[node name="Label" type="Label" parent="CheckButton"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -232.5
+offset_top = 84.0
+offset_right = 58.5
+offset_bottom = 139.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 40
+text = "Master Volume"
+
+[node name="VolumeSlider" type="HSlider" parent="CheckButton/Label"]
+layout_mode = 0
+offset_left = 297.0
+offset_top = -5.0
+offset_right = 471.0
+offset_bottom = 65.0
+value = 100.0
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -126.0
+offset_top = 350.0
+offset_right = 124.0
+offset_bottom = 450.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 28
+keep_pressed_outside = true
+text = "Go Back To Menu"
+
+[connection signal="toggled" from="CheckButton" to="." method="_on_check_button_toggled"]
+[connection signal="toggled" from="CheckButton" to="CheckButton" method="_on_toggled"]
+[connection signal="pressed" from="BackButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

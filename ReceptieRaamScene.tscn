@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://cq51m87ub5r5w"]
+
+[ext_resource type="Texture2D" uid="uid://jjo1ddu7nmmj" path="res://Receptie.png" id="1_g0vfl"]
+[ext_resource type="Texture2D" uid="uid://btjxq8j880vmr" path="res://ReceptieRaam.png" id="2_i5h5x"]
+[ext_resource type="Script" path="res://ReceptieRaamScene.gd" id="3_787ds"]
+[ext_resource type="Texture2D" uid="uid://dpo43bmoryopr" path="res://GoBack2.png" id="4_lb6as"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="GoBack" type="Button" parent="."]
+offset_left = 99.8078
+offset_top = 50.0
+offset_right = 180.808
+offset_bottom = 104.0
+
+[node name="Receptie" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(0.605042, 0.75)
+texture = ExtResource("1_g0vfl")
+
+[node name="ReceptieRaam" type="Sprite2D" parent="Receptie"]
+position = Vector2(2.38419e-05, 7.7486e-06)
+scale = Vector2(1.98747, 1.33333)
+texture = ExtResource("2_i5h5x")
+script = ExtResource("3_787ds")
+
+[node name="GoBack2" type="Sprite2D" parent="Receptie/ReceptieRaam"]
+position = Vector2(-355.092, -244)
+scale = Vector2(0.503151, 0.75)
+texture = ExtResource("4_lb6as")
+
+[connection signal="pressed" from="GoBack" to="Receptie/ReceptieRaam" method="_on_go_back_pressed"]
