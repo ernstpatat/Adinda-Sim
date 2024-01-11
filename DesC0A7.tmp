@@ -21,7 +21,6 @@ offset_right = 308.0
 offset_bottom = 92.0
 
 [node name="RaamButton" type="Button" parent="."]
-visible = false
 offset_right = 13.0
 offset_bottom = 180.0
 
@@ -32,7 +31,6 @@ offset_right = 231.0
 offset_bottom = 126.0
 
 [node name="ReceptieButton" type="Button" parent="."]
-visible = false
 offset_left = 300.0
 offset_right = 320.0
 offset_bottom = 180.0
@@ -40,12 +38,6 @@ offset_bottom = 180.0
 [node name="Main" type="Sprite2D" parent="."]
 position = Vector2(160, 90)
 texture = ExtResource("2_mqbn3")
-
-[node name="Botje" type="Sprite2D" parent="."]
-position = Vector2(250, 60)
-scale = Vector2(0.064209, 0.0618304)
-texture = ExtResource("7_8v31m")
-script = ExtResource("8_8kupy")
 
 [node name="Monitor" type="Sprite2D" parent="."]
 position = Vector2(158.75, 85)
@@ -58,6 +50,12 @@ position = Vector2(1329.33, -58.5389)
 scale = Vector2(0.90562, 0.911772)
 texture = ExtResource("4_nboqi")
 script = ExtResource("5_4d0g1")
+
+[node name="Botje" type="Sprite2D" parent="."]
+position = Vector2(250, 60)
+scale = Vector2(0.064209, 0.0618304)
+texture = ExtResource("7_8v31m")
+script = ExtResource("8_8kupy")
 
 [node name="$cammin" type="Sprite2D" parent="."]
 position = Vector2(313.395, 79.88)
