@@ -1,6 +1,6 @@
 extends Sprite2D
 
-@export var Textures: Array = [preload("res://UniformBotje.png"), preload("res://FakeUniformBotje.png")]
+@export var Textures: Array = [preload("res://Assets/UniformBotje.png"), preload("res://Assets/FakeUniformBotje.png")]
 @export var TextureNr: int = randi() % 2
 @export var BotjePressed: bool = false
 
