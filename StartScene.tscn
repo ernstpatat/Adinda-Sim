@@ -7,8 +7,10 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -2.0
-offset_right = -2.0
+offset_left = 420.0
+offset_top = 140.0
+offset_right = -412.0
+offset_bottom = -328.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_xc22y")
@@ -18,10 +20,12 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -325.0
-offset_right = 325.0
-offset_bottom = 112.0
+offset_left = -146.0
+offset_top = 3.0
+offset_right = 504.0
+offset_bottom = 115.0
 grow_horizontal = 2
+scale = Vector2(0.45, 0.45)
 theme_override_font_sizes/normal_font_size = 76
 text = "Adinda Simulator"
 
@@ -30,11 +34,12 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -126.0
-offset_top = 165.0
-offset_right = 124.0
-offset_bottom = 265.0
+offset_left = -48.0
+offset_top = 48.0
+offset_right = 202.0
+offset_bottom = 148.0
 grow_horizontal = 2
+scale = Vector2(0.4, 0.4)
 theme_override_font_sizes/font_size = 40
 keep_pressed_outside = true
 text = "Start Game"
@@ -44,11 +49,12 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -126.0
-offset_top = 290.0
-offset_right = 124.0
-offset_bottom = 390.0
+offset_left = -48.0
+offset_top = 91.0
+offset_right = 202.0
+offset_bottom = 191.0
 grow_horizontal = 2
+scale = Vector2(0.4, 0.4)
 theme_override_font_sizes/font_size = 40
 keep_pressed_outside = true
 text = "Options"
@@ -58,18 +64,19 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -126.0
-offset_top = 415.0
-offset_right = 124.0
-offset_bottom = 515.0
+offset_left = -48.0
+offset_top = 134.0
+offset_right = 202.0
+offset_bottom = 234.0
 grow_horizontal = 2
+scale = Vector2(0.4, 0.4)
 theme_override_font_sizes/font_size = 40
 keep_pressed_outside = true
 text = "Quit Game"
 
-[connection signal="pressed" from="StartButton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
-[connection signal="pressed" from="OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="StartButton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="OptionsButton" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="OptionsButton" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

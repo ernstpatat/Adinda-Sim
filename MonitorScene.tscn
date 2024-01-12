@@ -23,8 +23,7 @@ position = Vector2(160, 90)
 texture = ExtResource("1_wmdxj")
 
 [node name="Monitor" type="Sprite2D" parent="."]
-position = Vector2(160, 89.5)
-scale = Vector2(2.14765, 2.106)
+position = Vector2(160, 90)
 texture = ExtResource("2_10u0t")
 script = ExtResource("3_o8ga5")
 
