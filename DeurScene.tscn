@@ -29,5 +29,5 @@ position = Vector2(-209.67, 161.578)
 scale = Vector2(0.767497, 0.738322)
 texture = ExtResource("4_johcp")
 
-[connection signal="pressed" from="BackDoorButton" to="Sprite2D" method="_on_back_button_pressed"]
 [connection signal="pressed" from="BackDoorButton" to="Sprite2D" method="_on_back_door_button_pressed"]
+[connection signal="pressed" from="BackDoorButton" to="Sprite2D" method="_on_back_button_pressed"]
