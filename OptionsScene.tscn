@@ -68,5 +68,5 @@ text = "Go Back To Menu"
 
 [connection signal="toggled" from="CheckButton" to="." method="_on_check_button_toggled"]
 [connection signal="toggled" from="CheckButton" to="CheckButton" method="_on_toggled"]
-[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="BackButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

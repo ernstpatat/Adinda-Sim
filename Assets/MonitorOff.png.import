@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://elemih3087gl"
-path="res://.godot/imported/$cammin.png-ed8b468ece029c94be70c9c647d80f81.ctex"
+uid="uid://bhfmmih47cxek"
+path="res://.godot/imported/MonitorOff.png-8837461aace5d64c3cc32ae101f5ae71.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://$cammin.png"
-dest_files=["res://.godot/imported/$cammin.png-ed8b468ece029c94be70c9c647d80f81.ctex"]
+source_file="res://Assets/MonitorOff.png"
+dest_files=["res://.godot/imported/MonitorOff.png-8837461aace5d64c3cc32ae101f5ae71.ctex"]
 
 [params]
 

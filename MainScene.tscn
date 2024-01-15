@@ -1,0 +1,81 @@
+[gd_scene load_steps=11 format=3 uid="uid://610xf62h6nec"]
+
+[ext_resource type="Script" path="res://CameraScript.gd" id="1_0q64i"]
+[ext_resource type="Texture2D" uid="uid://btjxq8j880vmr" path="res://Assets/ReceptieRaam.png" id="3_2nd2l"]
+[ext_resource type="PackedScene" uid="uid://cudvtwx4udu0g" path="res://DeskScene.tscn" id="4_7g8b0"]
+[ext_resource type="Script" path="res://ReceptieRaam.gd" id="4_te1s3"]
+[ext_resource type="Texture2D" uid="uid://dipj51lur5b27" path="res://Assets/Deur.png" id="5_c5qew"]
+[ext_resource type="Script" path="res://Botje.gd" id="6_f2dfc"]
+[ext_resource type="Texture2D" uid="uid://jjo1ddu7nmmj" path="res://Assets/Receptie.png" id="6_fmqhh"]
+[ext_resource type="Texture2D" uid="uid://bvds0rg3rc85b" path="res://Assets/UniformBotje.png" id="7_ncbmu"]
+[ext_resource type="PackedScene" uid="uid://u5bmmtnm5jkv" path="res://RaamScene.tscn" id="10_pnq5c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xpe2k"]
+size = Vector2(16, 34)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Main" type="Node2D" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="Main"]
+offset = Vector2(160, 90)
+script = ExtResource("1_0q64i")
+
+[node name="Buttons" type="Node2D" parent="Main"]
+
+[node name="RaamDeskButton" type="Button" parent="Main/Buttons"]
+offset_left = -20.0
+offset_bottom = 180.0
+
+[node name="DeskRaamButton" type="Button" parent="Main/Buttons"]
+offset_right = 20.0
+offset_bottom = 180.0
+
+[node name="DeskReceptieButton" type="Button" parent="Main/Buttons"]
+offset_left = 300.0
+offset_right = 320.0
+offset_bottom = 180.0
+
+[node name="DirectieDeskButton" type="Button" parent="Main/Buttons"]
+offset_left = 320.0
+offset_right = 340.0
+offset_bottom = 180.0
+
+[node name="Raam" parent="Main" instance=ExtResource("10_pnq5c")]
+position = Vector2(-319.8, 0)
+script = null
+
+[node name="ReceptieRaam" type="Sprite2D" parent="Main"]
+position = Vector2(453, 98.663)
+scale = Vector2(0.168, 0.229435)
+texture = ExtResource("3_2nd2l")
+script = ExtResource("4_te1s3")
+
+[node name="Deur" type="Sprite2D" parent="Main"]
+position = Vector2(246.5, 58.5)
+scale = Vector2(0.378125, 0.372222)
+texture = ExtResource("5_c5qew")
+
+[node name="Botje" type="CharacterBody2D" parent="Main"]
+script = ExtResource("6_f2dfc")
+
+[node name="BotjeSprite" type="Sprite2D" parent="Main/Botje"]
+position = Vector2(250, 59)
+scale = Vector2(0.064209, 0.0618304)
+texture = ExtResource("7_ncbmu")
+
+[node name="BotjeCollision" type="CollisionShape2D" parent="Main/Botje"]
+position = Vector2(250, 59)
+shape = SubResource("RectangleShape2D_xpe2k")
+
+[node name="Desk" parent="Main" instance=ExtResource("4_7g8b0")]
+
+[node name="Receptie" type="Sprite2D" parent="Main"]
+position = Vector2(480, 90)
+scale = Vector2(0.8, 1.08434)
+texture = ExtResource("6_fmqhh")
+
+[connection signal="pressed" from="Main/Buttons/RaamDeskButton" to="Main/Camera2D" method="_on_raam_desk_button_pressed"]
+[connection signal="pressed" from="Main/Buttons/DeskRaamButton" to="Main/Camera2D" method="_on_desk_raam_button_pressed"]
+[connection signal="pressed" from="Main/Buttons/DeskReceptieButton" to="Main/Camera2D" method="_on_desk_receptie_button_pressed"]
+[connection signal="pressed" from="Main/Buttons/DirectieDeskButton" to="Main/Camera2D" method="_on_directie_desk_button_pressed"]

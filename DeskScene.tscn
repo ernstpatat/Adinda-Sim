@@ -1,74 +1,57 @@
-[gd_scene load_steps=10 format=3 uid="uid://610xf62h6nec"]
+[gd_scene load_steps=5 format=3 uid="uid://cudvtwx4udu0g"]
 
-[ext_resource type="Script" path="res://DeskScene.gd" id="1_vfxpu"]
-[ext_resource type="Texture2D" uid="uid://dnyvkx8b2r3mi" path="res://Assets/desk.png" id="2_mqbn3"]
-[ext_resource type="Texture2D" uid="uid://d2p6rnxsejcom" path="res://Assets/Monitor.png" id="2_pxyyx"]
-[ext_resource type="Texture2D" uid="uid://dipj51lur5b27" path="res://Assets/Deur.png" id="4_nboqi"]
-[ext_resource type="Script" path="res://DeskMonitor.gd" id="4_s6wb3"]
-[ext_resource type="Script" path="res://Deur.gd" id="5_4d0g1"]
-[ext_resource type="Texture2D" uid="uid://bvds0rg3rc85b" path="res://Assets/UniformBotje.png" id="7_8v31m"]
-[ext_resource type="Script" path="res://Botje.gd" id="8_8kupy"]
-[ext_resource type="Texture2D" uid="uid://elemih3087gl" path="res://$cammin.png" id="9_5m2qt"]
+[ext_resource type="Texture2D" uid="uid://bkvemi8m57bgy" path="res://Assets/desk.png" id="1_avama"]
+[ext_resource type="Script" path="res://DeskScene.gd" id="1_h0qd3"]
+[ext_resource type="Texture2D" uid="uid://bhfmmih47cxek" path="res://Assets/MonitorOff.png" id="6_k3fy7"]
+[ext_resource type="Texture2D" uid="uid://dpo43bmoryopr" path="res://Assets/GoBack2.png" id="7_tkfwf"]
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_vfxpu")
+script = ExtResource("1_h0qd3")
+
+[node name="MonitorGoBackButton" type="Button" parent="."]
+visible = false
+offset_left = 16.0
+offset_top = 135.0
+offset_right = 248.0
+offset_bottom = 356.0
+scale = Vector2(0.095, 0.095)
+button_mask = 3
 
 [node name="DeurButton" type="Button" parent="."]
-visible = false
 offset_left = 186.0
 offset_top = 25.0
 offset_right = 308.0
 offset_bottom = 92.0
-
-[node name="RaamButton" type="Button" parent="."]
-visible = false
-offset_right = 13.0
-offset_bottom = 180.0
+button_mask = 2
+flat = true
 
 [node name="MonitorButton" type="Button" parent="."]
 offset_left = 86.0
 offset_top = 44.0
 offset_right = 231.0
 offset_bottom = 126.0
+button_mask = 3
 
-[node name="ReceptieButton" type="Button" parent="."]
-visible = false
-offset_left = 300.0
-offset_right = 320.0
-offset_bottom = 180.0
-
-[node name="Main" type="Sprite2D" parent="."]
+[node name="Desk" type="Sprite2D" parent="."]
 position = Vector2(160, 90)
-texture = ExtResource("2_mqbn3")
-
-[node name="Botje" type="Sprite2D" parent="."]
-position = Vector2(250, 60)
-scale = Vector2(0.064209, 0.0618304)
-texture = ExtResource("7_8v31m")
-script = ExtResource("8_8kupy")
+texture = ExtResource("1_avama")
 
 [node name="Monitor" type="Sprite2D" parent="."]
-position = Vector2(158.75, 85)
-scale = Vector2(0.1875, 0.187909)
-texture = ExtResource("2_pxyyx")
-script = ExtResource("4_s6wb3")
+position = Vector2(158.5, 85)
+scale = Vector2(0.453125, 0.455556)
+texture = ExtResource("6_k3fy7")
 
-[node name="Deur" type="Sprite2D" parent="Monitor"]
-position = Vector2(1329.33, -58.5389)
-scale = Vector2(0.90562, 0.911772)
-texture = ExtResource("4_nboqi")
-script = ExtResource("5_4d0g1")
+[node name="DeurGoBackButton" type="Button" parent="."]
+visible = false
+offset_left = 50.0
+offset_top = 1.0
+offset_right = 227.0
+offset_bottom = 121.0
+scale = Vector2(0.095, 0.095)
+button_mask = 3
+icon = ExtResource("7_tkfwf")
 
-[node name="$cammin" type="Sprite2D" parent="."]
-position = Vector2(313.395, 79.88)
-scale = Vector2(0.117942, 0.110128)
-texture = ExtResource("9_5m2qt")
-
-[connection signal="pressed" from="DeurButton" to="Monitor" method="_on_deur_button_pressed"]
-[connection signal="pressed" from="DeurButton" to="Monitor/Deur" method="_on_deur_button_pressed"]
-[connection signal="pressed" from="RaamButton" to="." method="_on_raam_button_pressed"]
-[connection signal="pressed" from="RaamButton" to="Monitor" method="_on_raam_button_pressed"]
-[connection signal="pressed" from="MonitorButton" to="Monitor" method="_on_button_pressed"]
-[connection signal="pressed" from="MonitorButton" to="Monitor" method="_on_monitor_button_pressed"]
-[connection signal="pressed" from="MonitorButton" to="Monitor/Deur" method="_on_monitor_button_pressed"]
-[connection signal="pressed" from="ReceptieButton" to="." method="_on_receptie_button_pressed"]
+[connection signal="pressed" from="MonitorGoBackButton" to="." method="_on_monitor_go_back_button_pressed"]
+[connection signal="pressed" from="DeurButton" to="." method="_on_deur_button_pressed"]
+[connection signal="pressed" from="MonitorButton" to="." method="_on_monitor_button_pressed"]
+[connection signal="pressed" from="DeurGoBackButton" to="." method="_on_go_back_button_pressed"]
