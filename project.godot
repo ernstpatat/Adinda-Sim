@@ -15,10 +15,6 @@ run/main_scene="res://DeskScene.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
-[autoload]
-
-MeldingsFicheScene="*res://MeldingsFicheScene.tscn"
-
 [input]
 
 MouseWheel_Down={
