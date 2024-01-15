@@ -5,7 +5,6 @@
 [ext_resource type="Texture2D" uid="uid://cebj2khvwfdbb" path="res://Assets/meldingsfiche.png" id="2_4cl0w"]
 
 [node name="Meldingsfichescene" type="Node2D"]
-scale = Vector2(1.56699, 1.56699)
 script = ExtResource("1_1f3w7")
 
 [node name="ExitButton" type="Button" parent="."]
@@ -24,29 +23,21 @@ position = Vector2(160, 90)
 scale = Vector2(0.277778, 0.277778)
 texture = ExtResource("2_4cl0w")
 
-[node name="Beschrijving" type="TextEdit" parent="."]
+[node name="TextEdit" type="TextEdit" parent="."]
 offset_left = 90.0
 offset_top = 40.0
 offset_right = 426.0
 offset_bottom = 443.0
 scale = Vector2(0.36, 0.32)
-placeholder_text = "beschrijf de meldingsfiche"
+placeholder_text = "tesfsdfoidh"
 
-[node name="Titel" type="TextEdit" parent="."]
+[node name="TextEdit2" type="TextEdit" parent="."]
 offset_left = 109.0
 offset_top = 15.0
 offset_right = 337.0
 offset_bottom = 59.0
 scale = Vector2(0.36, 0.32)
-placeholder_text = "titel"
-
-[node name="Naam leerling" type="TextEdit" parent="."]
-offset_left = 21.0
-offset_top = 15.0
-offset_right = 249.0
-offset_bottom = 59.0
-scale = Vector2(0.36, 0.32)
-placeholder_text = "leerling"
+placeholder_text = "tesfsdfoidh"
 
 [node name="Submit" type="Button" parent="."]
 offset_left = 269.0
@@ -56,15 +47,4 @@ offset_bottom = 188.0
 scale = Vector2(0.6, 0.6)
 text = "Submit"
 
-[node name="View_meldingsfiches" type="Button" parent="."]
-offset_left = 6.38166
-offset_top = 152.522
-offset_right = 130.382
-offset_bottom = 206.522
-scale = Vector2(0.374134, 0.374134)
-text = "bekijk 
-meldingsfiches"
-
 [connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
-[connection signal="pressed" from="Submit" to="." method="_on_submit_pressed"]
-[connection signal="pressed" from="View_meldingsfiches" to="." method="_on_view_meldingsfiches_pressed"]
