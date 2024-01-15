@@ -1,2 +1,0 @@
-
-func ScaleUp(StartNr, EndNr, )
