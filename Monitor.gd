@@ -7,7 +7,7 @@ func _process(delta):
 	if ZoomingOut:
 		ZoomOut()
 	if not InMonitor:
-		get_tree().change_scene_to_file("res://MainScene.tscn")
+		get_tree().change_scene_to_file("res://DeskScene.tscn")
 
 func _on_back_button_pressed():
 	ZoomingOut = true
