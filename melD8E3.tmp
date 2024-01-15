@@ -1,0 +1,94 @@
+[gd_scene load_steps=2 format=3 uid="uid://ccs7c2vw6k5ca"]
+
+[ext_resource type="Script" path="res://meldingsfiches_button.gd" id="1_g34oo"]
+
+[node name="button" type="Node2D"]
+script = ExtResource("1_g34oo")
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = -23.0
+offset_right = 144.0
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+auto_translate = false
+text = "titel - naam"
+
+[node name="popup" type="ColorRect" parent="."]
+layout_direction = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -451.0
+offset_top = -226.5
+offset_right = 451.0
+offset_bottom = 226.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+
+[node name="naam" type="Label" parent="popup"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 7.5
+offset_right = 53.0
+offset_bottom = 30.5
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "naam"
+
+[node name="titel" type="Label" parent="popup"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -22.5
+offset_top = 10.5
+offset_right = 22.5
+offset_bottom = 33.5
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "titel"
+
+[node name="info" type="Label" parent="popup"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -441.0
+offset_top = -190.5
+offset_right = 441.0
+offset_bottom = 190.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "info"
+
+[node name="back_button" type="Button" parent="popup"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 410.0
+offset_top = -220.0
+offset_right = 443.0
+offset_bottom = -187.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "X"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="popup/back_button" to="." method="_on_back_button_pressed"]
