@@ -1,12 +1,21 @@
-[gd_scene load_steps=5 format=3 uid="uid://cudvtwx4udu0g"]
+[gd_scene load_steps=7 format=3 uid="uid://cudvtwx4udu0g"]
 
 [ext_resource type="Texture2D" uid="uid://bkvemi8m57bgy" path="res://Assets/desk.png" id="1_avama"]
 [ext_resource type="Script" path="res://DeskScene.gd" id="1_h0qd3"]
+[ext_resource type="PackedScene" uid="uid://byj2ukyjrptiq" path="res://meldingsfiche_scene.tscn" id="5_iptc0"]
+[ext_resource type="PackedScene" uid="uid://cnh8087l8u7h3" path="res://meldingsfiches_list.tscn" id="6_jhb06"]
 [ext_resource type="Texture2D" uid="uid://bhfmmih47cxek" path="res://Assets/MonitorOff.png" id="6_k3fy7"]
 [ext_resource type="Texture2D" uid="uid://dpo43bmoryopr" path="res://Assets/GoBack2.png" id="7_tkfwf"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_h0qd3")
+
+[node name="MeldingsFicheButton" type="Button" parent="."]
+visible = false
+offset_left = 17.0
+offset_top = 16.0
+offset_right = 39.0
+offset_bottom = 37.0
 
 [node name="MonitorGoBackButton" type="Button" parent="."]
 visible = false
@@ -16,6 +25,12 @@ offset_right = 248.0
 offset_bottom = 356.0
 scale = Vector2(0.095, 0.095)
 button_mask = 3
+
+[node name="FicheBackButton" type="Button" parent="."]
+offset_left = 298.0
+offset_top = 4.0
+offset_right = 315.0
+offset_bottom = 18.0
 
 [node name="DeurButton" type="Button" parent="."]
 offset_left = 186.0
@@ -38,7 +53,7 @@ texture = ExtResource("1_avama")
 
 [node name="Monitor" type="Sprite2D" parent="."]
 position = Vector2(158.5, 85)
-scale = Vector2(0.453125, 0.455556)
+scale = Vector2(0.453, 0.456)
 texture = ExtResource("6_k3fy7")
 
 [node name="DeurGoBackButton" type="Button" parent="."]
@@ -51,7 +66,18 @@ scale = Vector2(0.095, 0.095)
 button_mask = 3
 icon = ExtResource("7_tkfwf")
 
+[node name="MeldingsficheScene" parent="." instance=ExtResource("5_iptc0")]
+visible = false
+
+[node name="Meldingsfichelist" parent="." instance=ExtResource("6_jhb06")]
+visible = false
+scale = Vector2(0.277792, 0.277792)
+
+[connection signal="pressed" from="MeldingsFicheButton" to="." method="_on_meldings_fiche_button_pressed"]
 [connection signal="pressed" from="MonitorGoBackButton" to="." method="_on_monitor_go_back_button_pressed"]
+[connection signal="pressed" from="FicheBackButton" to="." method="_on_fiche_back_button_pressed"]
 [connection signal="pressed" from="DeurButton" to="." method="_on_deur_button_pressed"]
 [connection signal="pressed" from="MonitorButton" to="." method="_on_monitor_button_pressed"]
 [connection signal="pressed" from="DeurGoBackButton" to="." method="_on_go_back_button_pressed"]
+[connection signal="to_meldingsficheslist" from="MeldingsficheScene" to="." method="_on_meldingsfiche_scene_to_meldingsficheslist"]
+[connection signal="to_meldingsfichescene" from="Meldingsfichelist" to="." method="_on_meldingsfiches_list_to_meldingsfichescene"]
