@@ -1,0 +1,87 @@
+[gd_scene load_steps=2 format=3 uid="uid://dkwnndd6yigub"]
+
+[ext_resource type="Script" path="res://Meldingsfiches_btn.gd" id="1_ge7cp"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_ge7cp")
+
+[node name="Button" type="Button" parent="."]
+offset_right = 296.0
+offset_bottom = 62.0
+scale = Vector2(3, 3)
+text = "0 - titel - naam"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 30
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.139
+anchor_top = 0.139
+anchor_right = 0.139
+anchor_bottom = 0.139
+offset_left = -160.128
+offset_top = -90.072
+offset_right = 1035.87
+offset_bottom = 582.928
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.267449, 0.267449)
+size_flags_horizontal = 6
+size_flags_vertical = 3
+
+[node name="popup" type="ColorRect" parent="CanvasLayer/CenterContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(800, 400)
+layout_mode = 2
+color = Color(0.666667, 0.666667, 0.666667, 1)
+
+[node name="naam" type="RichTextLabel" parent="CanvasLayer/CenterContainer/popup"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 6.0
+offset_right = 102.0
+offset_bottom = 37.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "naam"
+
+[node name="info" type="RichTextLabel" parent="CanvasLayer/CenterContainer/popup"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 113.0
+offset_right = 789.0
+offset_bottom = 390.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "info"
+
+[node name="titel" type="RichTextLabel" parent="CanvasLayer/CenterContainer/popup"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -74.5349
+offset_top = -190.178
+offset_right = 75.4651
+offset_bottom = -150.178
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+text = "titel"
+
+[node name="BackButton" type="Button" parent="CanvasLayer/CenterContainer/popup"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -63.2409
+offset_top = 9.82243
+offset_right = -7.24091
+offset_bottom = 60.8224
+grow_horizontal = 0
+text = "x"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/CenterContainer/popup/BackButton" to="." method="_on_back_button_pressed"]
