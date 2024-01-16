@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bkvemi8m57bgy" path="res://Assets/desk.png" id="1_avama"]
 [ext_resource type="Script" path="res://DeskScene.gd" id="1_h0qd3"]
 [ext_resource type="PackedScene" uid="uid://byj2ukyjrptiq" path="res://meldingsfiche_scene.tscn" id="5_iptc0"]
-[ext_resource type="PackedScene" uid="uid://cnh8087l8u7h3" path="res://meldingsfiches_list.tscn" id="6_jhb06"]
+[ext_resource type="PackedScene" uid="uid://cv1v7r6st53he" path="res://meldingsfiches_list.tscn" id="6_jhb06"]
 [ext_resource type="Texture2D" uid="uid://bhfmmih47cxek" path="res://Assets/MonitorOff.png" id="6_k3fy7"]
 [ext_resource type="Texture2D" uid="uid://dpo43bmoryopr" path="res://Assets/GoBack2.png" id="7_tkfwf"]
 
@@ -80,4 +80,5 @@ scale = Vector2(0.277792, 0.277792)
 [connection signal="pressed" from="MonitorButton" to="." method="_on_monitor_button_pressed"]
 [connection signal="pressed" from="DeurGoBackButton" to="." method="_on_go_back_button_pressed"]
 [connection signal="to_meldingsficheslist" from="MeldingsficheScene" to="." method="_on_meldingsfiche_scene_to_meldingsficheslist"]
+[connection signal="update_fiches_list" from="MeldingsficheScene" to="Meldingsfichelist" method="_on_meldingsfiche_scene_update_fiches_list"]
 [connection signal="to_meldingsfichescene" from="Meldingsfichelist" to="." method="_on_meldingsfiches_list_to_meldingsfichescene"]
