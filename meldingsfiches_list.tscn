@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnh8087l8u7h3"]
+
+[ext_resource type="Script" path="res://meldingsfiches_list.gd" id="1_ugcne"]
+
+[node name="Meldingsfiches" type="Node2D"]
+script = ExtResource("1_ugcne")
+
+[node name="BG" type="ColorRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.823529, 0.262745, 0.905882, 1)
+
+[node name="Meldingsfiches_list" type="Node2D" parent="."]
+position = Vector2(424, 0)
+scale = Vector2(0.277788, 0.277788)
+
+[node name="VScrollBar" type="VScrollBar" parent="."]
+offset_left = 712.0
+offset_right = 730.0
+offset_bottom = 648.0
+page = 10.0
+
+[node name="Backbutton" type="Button" parent="."]
+offset_left = 1080.0
+offset_top = 16.0
+offset_right = 1140.0
+offset_bottom = 72.0
+text = "X"
+
+[connection signal="pressed" from="Backbutton" to="." method="_on_backbutton_pressed"]
