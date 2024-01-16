@@ -1,0 +1,56 @@
+[gd_scene load_steps=3 format=3 uid="uid://byj2ukyjrptiq"]
+
+[ext_resource type="Texture2D" uid="uid://cebj2khvwfdbb" path="res://Assets/meldingsfiche.png" id="1_0355b"]
+[ext_resource type="Script" path="res://meldingsfiche_scene.gd" id="1_ccpkr"]
+
+[node name="MeldingsficheScene" type="Node2D"]
+script = ExtResource("1_ccpkr")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(160, 90)
+scale = Vector2(0.277778, 0.277778)
+texture = ExtResource("1_0355b")
+
+[node name="Info" type="TextEdit" parent="."]
+offset_left = 91.0
+offset_top = 40.0
+offset_right = 512.0
+offset_bottom = 509.0
+scale = Vector2(0.283377, 0.27274)
+placeholder_text = "Info"
+
+[node name="Titel" type="TextEdit" parent="."]
+offset_left = 109.0
+offset_top = 15.0
+offset_right = 323.0
+offset_bottom = 51.0
+scale = Vector2(0.386811, 0.381586)
+placeholder_text = "Titel"
+
+[node name="Naam" type="TextEdit" parent="."]
+offset_left = 199.0
+offset_top = 15.0
+offset_right = 413.0
+offset_bottom = 51.0
+scale = Vector2(0.399232, 0.393443)
+placeholder_text = "Naam"
+
+[node name="view_fiches" type="Button" parent="."]
+offset_left = 6.0
+offset_top = 155.0
+offset_right = 130.0
+offset_bottom = 209.0
+scale = Vector2(0.359344, 0.359344)
+text = "bekijk 
+meldingsfiches"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 266.0
+offset_top = 151.0
+offset_right = 328.0
+offset_bottom = 182.0
+scale = Vector2(0.762038, 0.762038)
+text = "submit"
+
+[connection signal="pressed" from="view_fiches" to="." method="_on_view_fiches_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_submit_pressed"]

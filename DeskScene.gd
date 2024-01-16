@@ -1,5 +1,8 @@
+
 extends Node2D
 
+signal disable_button
+signal enable_button
 func _on_deur_button_pressed():
 	$Deur.global_position.x = 160
 	$Deur.global_position.y = 90
@@ -28,6 +31,9 @@ func _on_monitor_button_pressed():
 	$Monitor.texture = preload('res://Assets/MonitorOn.png')
 	$MonitorGoBackButton.visible = true
 	$MonitorButton.visible = false
+	$MeldingsFicheButton.visible = true
+	$FicheBackButton.visible = true
+	disable_button.emit()
 
 func _on_monitor_go_back_button_pressed():
 	$Monitor.global_position.x = 158.5
@@ -37,3 +43,22 @@ func _on_monitor_go_back_button_pressed():
 	$Monitor.texture = preload('res://Assets/MonitorOff.png')
 	$MonitorGoBackButton.visible = false
 	$MonitorButton.visible = true
+	$MeldingsFicheButton.visible = false
+	$FicheBackButton.visible = false
+	enable_button.emit()
+
+func _on_meldings_fiche_button_pressed():
+	$MeldingsficheScene.visible = true
+	$FicheBackButton.visible = true
+
+func _on_fiche_back_button_pressed():
+	$MeldingsficheScene.visible = false
+	$FicheBackButton.visible = false
+
+func _on_meldingsfiches_list_to_meldingsfichescene():
+	$MeldingsficheScene.visible = true
+	$Meldingsfichelist.visible = false
+
+func _on_meldingsfiche_scene_to_meldingsficheslist():
+	$MeldingsficheScene.visible = false
+	$Meldingsfichelist.visible = true
