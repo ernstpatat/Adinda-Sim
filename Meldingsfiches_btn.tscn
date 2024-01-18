@@ -6,9 +6,19 @@
 script = ExtResource("1_ge7cp")
 
 [node name="Button" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = 20.0
 offset_right = 296.0
-offset_bottom = 62.0
+offset_bottom = 82.0
+grow_horizontal = 2
+grow_vertical = 2
 scale = Vector2(3, 3)
+size_flags_horizontal = 4
+size_flags_vertical = 4
 text = "0 - titel - naam"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -44,6 +54,7 @@ offset_right = 102.0
 offset_bottom = 37.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 text = "naam"
+fit_content = true
 
 [node name="info" type="RichTextLabel" parent="CanvasLayer/CenterContainer/popup"]
 layout_mode = 0
@@ -70,6 +81,7 @@ grow_vertical = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 20
 text = "titel"
+fit_content = true
 
 [node name="BackButton" type="Button" parent="CanvasLayer/CenterContainer/popup"]
 layout_mode = 1
