@@ -9,6 +9,9 @@ extends CharacterBody2D
 @export var Part1: bool = true
 @export var FuncNr: float = 0
 
+signal IncreaseBar
+signal DecreaseBar
+
 func _ready():
 	$BotjeSprite.texture = Textures[TextureNr]
 	velocity = Vector2(13, 10)
@@ -24,7 +27,7 @@ func _process(delta):
 		global_position.y = 0
 		velocity = Vector2(13, 10)
 		if $BotjeSprite.texture == Textures[1] and not BotjePressed:
-			print("Hoerenkind ge ebt een zonder uniform laten gaan")
+			DecreaseBar.emit()
 		TextureNr = randi() % 2
 		$BotjeSprite.texture = Textures[TextureNr]
 		BotjePressed = false
@@ -33,7 +36,7 @@ func _input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 		if get_viewport_rect().has_point(to_local(event.position)):
 			if $BotjeSprite.texture == Textures[0] and not BotjePressed:
-				print("FOUT DOM KUTKIND")
+				DecreaseBar.emit()
 			elif $BotjeSprite.texture == Textures[1] and not BotjePressed:
-				print("juist + 500 Sociaal Krediet")
+				IncreaseBar.emit()
 			BotjePressed = true

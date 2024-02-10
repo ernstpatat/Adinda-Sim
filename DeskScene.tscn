@@ -1,11 +1,16 @@
-[gd_scene load_steps=7 format=3 uid="uid://cudvtwx4udu0g"]
+[gd_scene load_steps=12 format=3 uid="uid://cudvtwx4udu0g"]
 
 [ext_resource type="Texture2D" uid="uid://bkvemi8m57bgy" path="res://Assets/desk.png" id="1_avama"]
 [ext_resource type="Script" path="res://DeskScene.gd" id="1_h0qd3"]
 [ext_resource type="PackedScene" uid="uid://byj2ukyjrptiq" path="res://meldingsfiche_scene.tscn" id="5_iptc0"]
 [ext_resource type="PackedScene" uid="uid://cv1v7r6st53he" path="res://meldingsfiches_list.tscn" id="6_jhb06"]
 [ext_resource type="Texture2D" uid="uid://bhfmmih47cxek" path="res://Assets/MonitorOff.png" id="6_k3fy7"]
+[ext_resource type="Texture2D" uid="uid://dtbi1h1u8soki" path="res://Assets/klok.png" id="7_2qos7"]
 [ext_resource type="Texture2D" uid="uid://dpo43bmoryopr" path="res://Assets/GoBack2.png" id="7_tkfwf"]
+[ext_resource type="Script" path="res://Minuutwijzer.gd" id="8_8ehcu"]
+[ext_resource type="Texture2D" uid="uid://c1u8nl0dq66el" path="res://Assets/minuutwijzer.png" id="8_u668j"]
+[ext_resource type="Texture2D" uid="uid://cx4lngm2acd8i" path="res://Assets/uurwijzer.png" id="9_qg4s8"]
+[ext_resource type="Script" path="res://Uurwijzer.gd" id="10_nwefo"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_h0qd3")
@@ -50,6 +55,29 @@ button_mask = 3
 [node name="Desk" type="Sprite2D" parent="."]
 position = Vector2(160, 90)
 texture = ExtResource("1_avama")
+
+[node name="Klok" type="Node2D" parent="."]
+
+[node name="Klok" type="Sprite2D" parent="Klok"]
+position = Vector2(37, 35)
+texture = ExtResource("7_2qos7")
+
+[node name="Minuutwijzer" type="Node2D" parent="Klok"]
+position = Vector2(37, 35)
+script = ExtResource("8_8ehcu")
+
+[node name="Minuutwijzer" type="Sprite2D" parent="Klok/Minuutwijzer"]
+position = Vector2(0, -9)
+texture = ExtResource("8_u668j")
+
+[node name="Uurwijzer" type="Node2D" parent="Klok"]
+position = Vector2(37, 35)
+script = ExtResource("10_nwefo")
+
+[node name="Uurwijzer" type="Sprite2D" parent="Klok/Uurwijzer"]
+position = Vector2(0, -7)
+rotation = -1.5708
+texture = ExtResource("9_qg4s8")
 
 [node name="Monitor" type="Sprite2D" parent="."]
 position = Vector2(158.5, 85)

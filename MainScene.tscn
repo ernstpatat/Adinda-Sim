@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://610xf62h6nec"]
+[gd_scene load_steps=13 format=3 uid="uid://610xf62h6nec"]
 
 [ext_resource type="Script" path="res://CameraScript.gd" id="1_0q64i"]
 [ext_resource type="Texture2D" uid="uid://btjxq8j880vmr" path="res://Assets/ReceptieRaam.png" id="3_2nd2l"]
@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://jjo1ddu7nmmj" path="res://Assets/Receptie.png" id="6_fmqhh"]
 [ext_resource type="Texture2D" uid="uid://bvds0rg3rc85b" path="res://Assets/UniformBotje.png" id="7_ncbmu"]
 [ext_resource type="PackedScene" uid="uid://u5bmmtnm5jkv" path="res://RaamScene.tscn" id="10_pnq5c"]
+[ext_resource type="Script" path="res://ProgressBar.gd" id="10_yq8b6"]
+[ext_resource type="Texture2D" uid="uid://be38i4jw6a4ac" path="res://Assets/RicoBlij.png" id="11_bae33"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xpe2k"]
 size = Vector2(16, 34)
@@ -75,7 +77,26 @@ position = Vector2(480, 90)
 scale = Vector2(0.8, 1.08434)
 texture = ExtResource("6_fmqhh")
 
+[node name="RicoBar" type="Node2D" parent="Main"]
+position = Vector2(50, 7.38)
+scale = Vector2(0.195, 0.195)
+
+[node name="ProgressBar2" type="ProgressBar" parent="Main/RicoBar"]
+offset_left = 73.75
+offset_top = 8.87
+offset_right = 969.75
+offset_bottom = 45.87
+value = 85.0
+script = ExtResource("10_yq8b6")
+
+[node name="RicoFace" type="Sprite2D" parent="Main/RicoBar/ProgressBar2"]
+position = Vector2(956, 19)
+scale = Vector2(0.593954, 0.528333)
+texture = ExtResource("11_bae33")
+
 [connection signal="pressed" from="Main/Buttons/RaamDeskButton" to="Main/Camera2D" method="_on_raam_desk_button_pressed"]
 [connection signal="pressed" from="Main/Buttons/DeskRaamButton" to="Main/Camera2D" method="_on_desk_raam_button_pressed"]
 [connection signal="pressed" from="Main/Buttons/DeskReceptieButton" to="Main/Camera2D" method="_on_desk_receptie_button_pressed"]
 [connection signal="pressed" from="Main/Buttons/DirectieDeskButton" to="Main/Camera2D" method="_on_directie_desk_button_pressed"]
+[connection signal="DecreaseBar" from="Main/Botje" to="Main/RicoBar/ProgressBar2" method="_on_botje_decrease_bar"]
+[connection signal="IncreaseBar" from="Main/Botje" to="Main/RicoBar/ProgressBar2" method="_on_botje_increase_bar"]

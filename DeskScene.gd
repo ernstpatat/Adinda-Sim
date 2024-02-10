@@ -3,6 +3,7 @@ extends Node2D
 
 signal disable_button
 signal enable_button
+
 func _on_deur_button_pressed():
 	$Deur.global_position.x = 160
 	$Deur.global_position.y = 90
