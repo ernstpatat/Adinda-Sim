@@ -14,27 +14,29 @@ signal DecreaseBar
 
 func _ready():
 	$BotjeSprite.texture = Textures[TextureNr]
-	velocity = Vector2(13, 10)
+	velocity = Vector2(0, 0)
 
 func _process(delta):
 	move_and_collide(velocity * delta)
 	if global_position.x >= 70 and global_position.x <= 80:
 		global_position.x = 120
 		global_position.y = 96
-		velocity = Vector2(23, -12)
+		velocity = Vector2(0, -0)
 	elif global_position.x >= 235:
 		global_position.x = 0
 		global_position.y = 0
-		velocity = Vector2(13, 10)
+		velocity = Vector2(0, 0)
 		if $BotjeSprite.texture == Textures[1] and not BotjePressed:
 			DecreaseBar.emit()
 		TextureNr = randi() % 2
 		$BotjeSprite.texture = Textures[TextureNr]
 		BotjePressed = false
 
+
 func _input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-		if get_viewport_rect().has_point(to_local(event.position)):
+		if event.position.x :
+			print('lol')
 			if $BotjeSprite.texture == Textures[0] and not BotjePressed:
 				DecreaseBar.emit()
 			elif $BotjeSprite.texture == Textures[1] and not BotjePressed:

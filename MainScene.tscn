@@ -59,6 +59,7 @@ scale = Vector2(0.378125, 0.372222)
 texture = ExtResource("5_c5qew")
 
 [node name="Botje" type="CharacterBody2D" parent="Main"]
+position = Vector2(1, 0)
 script = ExtResource("6_f2dfc")
 
 [node name="BotjeSprite" type="Sprite2D" parent="Main/Botje"]

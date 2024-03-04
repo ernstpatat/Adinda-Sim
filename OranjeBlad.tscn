@@ -1,0 +1,81 @@
+[gd_scene load_steps=13 format=3 uid="uid://bxlng0m3g7cla"]
+
+[ext_resource type="Texture2D" uid="uid://bhfmmih47cxek" path="res://Assets/MonitorOff.png" id="1_jbps2"]
+[ext_resource type="Texture2D" uid="uid://cva78ygv12f1q" path="res://Assets/OranjeBlad.png" id="2_cbwda"]
+[ext_resource type="Texture2D" uid="uid://dqktt67fome0e" path="res://Assets/OranjeBladNamen/Baetsle.png" id="3_sl31d"]
+[ext_resource type="Texture2D" uid="uid://dj457yyalqgsm" path="res://Assets/OranjeBladNamen/De Winter.png" id="4_ns5yi"]
+[ext_resource type="Texture2D" uid="uid://bmsl7u1cg35en" path="res://Assets/OranjeBladNamen/Gistelinck.png" id="5_uoeei"]
+[ext_resource type="Texture2D" uid="uid://e0je1a1vrify" path="res://Assets/OranjeBladNamen/Hosselaer.png" id="6_wtfuq"]
+[ext_resource type="Texture2D" uid="uid://usapbr1n3spk" path="res://Assets/OranjeBladNamen/Merchiers.png" id="7_g2npg"]
+[ext_resource type="Texture2D" uid="uid://cqr0c4q6xy0sa" path="res://Assets/OranjeBladNamen/OP.png" id="8_kdvfo"]
+[ext_resource type="Texture2D" uid="uid://cq6611lheys50" path="res://Assets/OranjeBladNamen/Papegnies.png" id="9_kpo2r"]
+[ext_resource type="Texture2D" uid="uid://yweem2gnhy5p" path="res://Assets/OranjeBladNamen/Van Boxtael.png" id="10_4yl6p"]
+[ext_resource type="Texture2D" uid="uid://b1mflcipnclu2" path="res://Assets/OranjeBladNamen/Mertens.png" id="11_lgujk"]
+[ext_resource type="Texture2D" uid="uid://nuxakant02y6" path="res://Assets/OranjeBladNamen/Meulenaire.png" id="12_ko723"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Monitor2" type="Sprite2D" parent="."]
+position = Vector2(160, 90)
+texture = ExtResource("1_jbps2")
+
+[node name="OranjeBlad" type="Sprite2D" parent="."]
+position = Vector2(84.5, 90)
+scale = Vector2(0.252931, 0.264657)
+texture = ExtResource("2_cbwda")
+
+[node name="ItemList" type="ItemList" parent="."]
+offset_left = 160.0
+offset_top = 11.0
+offset_right = 311.0
+offset_bottom = 169.0
+
+[node name="Baetsle" type="Sprite2D" parent="ItemList"]
+position = Vector2(65.24, 4.895)
+scale = Vector2(0.252878, 0.256053)
+texture = ExtResource("3_sl31d")
+
+[node name="De Winter" type="Sprite2D" parent="ItemList"]
+position = Vector2(65.24, 92.375)
+scale = Vector2(0.252878, 0.256053)
+texture = ExtResource("4_ns5yi")
+
+[node name="Sprite2D3" type="Sprite2D" parent="ItemList"]
+position = Vector2(65.24, 82.66)
+scale = Vector2(0.252878, 0.256053)
+texture = ExtResource("5_uoeei")
+
+[node name="Sprite2D4" type="Sprite2D" parent="ItemList"]
+position = Vector2(65.24, 72.98)
+scale = Vector2(0.252878, 0.256053)
+texture = ExtResource("6_wtfuq")
+
+[node name="Sprite2D5" type="Sprite2D" parent="ItemList"]
+position = Vector2(65.24, 63.25)
+scale = Vector2(0.252878, 0.256053)
+texture = ExtResource("7_g2npg")
+
+[node name="Sprite2D6" type="Sprite2D" parent="ItemList"]
+position = Vector2(65.24, 53.46)
+scale = Vector2(0.252878, 0.256053)
+texture = ExtResource("8_kdvfo")
+
+[node name="Sprite2D7" type="Sprite2D" parent="ItemList"]
+position = Vector2(65.24, 43.74)
+scale = Vector2(0.252878, 0.256053)
+texture = ExtResource("9_kpo2r")
+
+[node name="Sprite2D8" type="Sprite2D" parent="ItemList"]
+position = Vector2(65.24, 34.045)
+scale = Vector2(0.252878, 0.256053)
+texture = ExtResource("10_4yl6p")
+
+[node name="Sprite2D9" type="Sprite2D" parent="ItemList"]
+position = Vector2(65.24, 24.33)
+scale = Vector2(0.252878, 0.256053)
+texture = ExtResource("11_lgujk")
+
+[node name="Sprite2D10" type="Sprite2D" parent="ItemList"]
+position = Vector2(65.24, 14.635)
+scale = Vector2(0.252878, 0.256053)
+texture = ExtResource("12_ko723")

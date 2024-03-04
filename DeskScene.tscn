@@ -31,6 +31,12 @@ offset_bottom = 356.0
 scale = Vector2(0.095, 0.095)
 button_mask = 3
 
+[node name="OranjeBladButton" type="Button" parent="."]
+offset_left = 19.0
+offset_top = 40.0
+offset_right = 34.0
+offset_bottom = 61.0
+
 [node name="FicheBackButton" type="Button" parent="."]
 offset_left = 298.0
 offset_top = 4.0
@@ -81,7 +87,7 @@ texture = ExtResource("9_qg4s8")
 
 [node name="Monitor" type="Sprite2D" parent="."]
 position = Vector2(158.5, 85)
-scale = Vector2(0.453, 0.456)
+scale = Vector2(0.453125, 0.455556)
 texture = ExtResource("6_k3fy7")
 
 [node name="DeurGoBackButton" type="Button" parent="."]
